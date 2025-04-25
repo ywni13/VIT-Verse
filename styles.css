@@ -1,0 +1,280 @@
+html, body {
+    height: 100%; /* Make body take up the full viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #8c0000, #4a1400); /* Reddish rust gradient */
+    color: #fbe9e7; /* Very light red/off-white for general text */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    animation: fadeIn 1s ease-in;
+}
+
+.container {
+    max-width: 900px;
+    padding: 40px; /* Increased padding for better spacing */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black container */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Deeper shadow for the container */
+}
+
+/* Headings */
+h1 {
+    font-size: 3.5rem;
+    color: #ffdddd; /* Lighter red */
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideInDown 0.8s ease forwards 0.2s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Dark text shadow */
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ffaaaa; /* Even lighter red */
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: slideInDown 0.8s ease forwards 0.4s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #ff8888; /* Yet lighter red */
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideInDown 0.8s ease forwards 0.6s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.4rem;
+    color: #fbe9e7;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.8s;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: slideInUp 0.8s ease forwards 1s;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 15px 35px;
+    background: linear-gradient(to right, #ff1744, #d50000); /* Vibrant red gradient */
+    color: #ffffff;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6); /* Darker button shadow */
+}
+
+.button:hover {
+    background: linear-gradient(to right, #d50000, #ff1744); /* Reverse gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); /* Deeper hover shadow */
+}
+
+/* Form Styles */
+.form-container {
+    background: linear-gradient(to bottom right, #212121, #000000); /* Black gradient */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 30px auto;
+    opacity: 0;
+    animation: slideIn 0.8s ease forwards;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: #fbe9e7; /* Light text on form */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #ffcdd2; /* Light red label */
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #424242; /* Darker border */
+    border-radius: 8px;
+    background-color: #333333;
+    color: #fbe9e7;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff8a80; /* Brighter red focus */
+    background-color: #444444;
+}
+
+/* Forum Styles */
+.forum-container {
+    max-width: 900px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #212121, #000000); /* Black gradient */
+    border-radius: 15px;
+    margin: 30px auto;
+    color: #fbe9e7;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.forum-post {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #fbe9e7;
+}
+
+.forum-post h4 {
+    font-size: 1.5rem;
+    color: #ffb3b3; /* Light red */
+    margin-bottom: 10px;
+}
+
+.forum-post p {
+    font-size: 1.2rem;
+    color: #e0f2f7; /* Very light blue-grey for contrast */
+}
+
+.forum-controls {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #212121;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.forum-controls label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #ffcdd2; /* Light red */
+}
+
+.forum-controls input[type="text"],
+.forum-controls textarea,
+.forum-controls button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #424242;
+    border-radius: 8px;
+    background-color: #333333;
+    color: #fbe9e7;
+    box-sizing: border-box;
+}
+
+.forum-controls button {
+    background: linear-gradient(to right, #ff1744, #d50000); /* Vibrant red gradient */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.forum-controls button:hover {
+    background: linear-gradient(to right, #d50000, #ff1744);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease forwards;
+}
+
+.slide-in.delay {
+    animation-delay: 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+    .buttons {
+        gap: 15px;
+    }
+}
